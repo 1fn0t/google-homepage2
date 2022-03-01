@@ -1,0 +1,140 @@
+/* General */
+html {
+    height: 100%;
+    min-height: 100%;
+}
+body, footer {
+    font-size: 14px;
+    font-family: Roboto,arial,sans-serif;
+    color: #191a1b;
+}
+.divider {
+    width: 10px;
+    height: auto;
+    display: inline-block;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* Logos */
+#google-apps-logo {
+    height: 20px;
+    width: 20px;
+}
+#google-logo {
+    height: 105px;
+}
+#leaf-icon {
+    height: 13px;
+}
+/* Top */
+#top-dashboard {
+    margin: 0px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr 200px;
+    grid-template-rows: 50px;
+    grid-template-areas: "top1 . top2";
+}
+#top2, #top1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+#top1 {
+    grid-area: top1;
+}
+#top2 {
+    grid-area: top2;
+}
+#sign-in-btn {
+    background-color: #4683ea;
+    border: 1px solid #4285f4;
+    color: white;
+    font-weight: bold;
+}
+/* Main Content */
+#main-container {
+    display: grid;
+    grid-template-rows: 300px 70px 70px 200px;
+    grid-template-areas: "logo" "bar" "btns" ".";
+}
+#google-btns, #search-bar {
+    align-self: center;
+    justify-self: center;
+}
+#google-logo {
+    grid-area: logo;
+    align-self: end;
+    justify-self: center;
+}
+#google-btns {
+    grid-area: btns;
+    display: flex;
+    flex-direction: row;
+}
+#search-bar {
+    grid-area: bar;
+    height: 38px;
+    width: 30%;
+    border: 1px solid rgba(0, 0, 0, 0.152);
+    border-radius: 30px;
+}
+.search-bar-background {
+    background-image: url("Images/google-search-icon.png"), url("Images/google-voice-assistant.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 9px center, right 9px center;
+    background-size: 18px 18px, 28px 20px;
+}
+#search-bar:focus {
+    box-shadow: 1px 1px 5px grey;
+}
+#google-search-btn, #rand-search-btn {
+    border: none;
+    height: 34px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+#google-search-btn:hover, #rand-search-btn:hover {
+    border: 1px solid rgba(0, 0, 0, 0.255)
+}
+#search-bar[type=text] {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+/* Bottom */
+footer {
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(220, 221, 211, 0.514);
+}
+#foot1, #foot3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+}
+#foot2 {
+    align-self: center;
+    justify-self: center;
+}
+#foot1 {
+    grid-area: foot1;
+}
+#foot2 {
+    grid-area: foot2;
+}
+#foot3 {
+    grid-area: foot3;
+}
+#secondary-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 50px;
+    grid-template-areas: "foot1 foot2 foot3";
+    margin: 0px 35px 0px 35px;
+}
